@@ -4,8 +4,6 @@
 ##
 ## Date Created: 5/20/2022
 ##
-## Email: bzhang4@luc.edu
-##
 ## ---------------------------
 ##
 ## Special notes:
@@ -52,5 +50,5 @@ lines(pm10, type = "o", pch = 22, col = "blue", lty = 2)
 hist(pm2.5)
 # 3rd - a boxplot of pm10
 boxplot(pm10)
-# restore original setting - no combination
+# restore original setting
 par(opar)
