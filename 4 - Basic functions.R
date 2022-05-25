@@ -4,8 +4,6 @@
 ##
 ## Date Created: 5/24/2022
 ##
-## Email: bzhang4@luc.edu
-##
 ## ---------------------------
 ##
 ## Special notes:
