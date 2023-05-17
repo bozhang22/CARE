@@ -43,3 +43,10 @@ while (i <= 10) {print(Edgewater[i,]); i <- i + 1}
 
 # Conditional execution
 if (mean(Edgewater_B_2021$PM2.5_CF1_ug.m3, na.rm = T) < 12) print("Air quality meets EPA standards.") else print("Air quality does not meet EPA standards.")
+
+# Value correction
+Edgewater_B_2021$PM2.5_Correct <- NA
+Edgewater_B_2021$PM2.5_Correct <- with(Edgewater_B_2021,
+  ifelse(PM2.5_CF1_ug.m3 <= 343,
+         0.52*PM2.5_CF1_ug.m3 - 0.086*RH + 5.75,
+         0.46*PM2.5_CF1_ug.m3 + 0.000393 * PM2.5_CF1_ug.m3 * PM2.5_CF1_ug.m3 + 2.97))
